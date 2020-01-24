@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             mc:Ignorable="d"
+             Title="GESTOR DE PRODUCTOS"
+             x:Class="ASSE.Views.Gestion.Gproducto">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <StackLayout>
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+
+                            <Image Margin="0,0,0,10" HeightRequest="100" Source="listaP.PNG" ></Image>
+                        <Label Margin="0,0,0,10" Text="ASSE-EVOL PRODUCTS CONTROL" FontAttributes="Bold" FontSize="Large" TextColor="Orange" HorizontalTextAlignment="Center" ></Label>
+
+                        <Entry x:Name="txtPid" Placeholder="Producto id" IsEnabled="False"></Entry>
+                            <Picker x:Name="txtPnombre" ></Picker>
+                            <Picker x:Name="txtProvedor" ></Picker>
+                            <Picker x:Name="txtCategoria" ></Picker>
+                            <Picker x:Name="txtPrecio"  ></Picker>
+                            <Picker x:Name="PickStokid" ></Picker>
+
+                            
+                            
+
+                          
+
+
+
+                                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                            <Button x:Name="btnAdd" WidthRequest="200" Text="AGREGAR" Clicked="BtnAdd_Clicked"/>
+                            
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                            <Button x:Name="btnUpdate" WidthRequest="200" Text="ACTUALIZAR" Clicked="BtnUpdate_Clicked" />
+                            <Button x:Name="btnDelete" WidthRequest="200" Text="BORRAR" Clicked="BtnDelete_Clicked" />
+                        </StackLayout>
+
+
+
+
+
+                            <ListView x:Name="lstProduct" ItemSelected="LstProduct_ItemSelected">
+
+
+                                <ListView.ItemTemplate >
+
+                                    <DataTemplate >
+
+                                        <ViewCell >
+                                            <Grid Margin="2" HorizontalOptions="Start" >
+                                                <!-- Colunas -->
+                                                <Grid.ColumnDefinitions  >
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <!-- Linhas -->
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="1"/>
+                                                </Grid.RowDefinitions>
+
+                                                <!-- Código -->
+                                                <Image Grid.Row="0" 
+                               Grid.Column="0" 
+                               Margin="0"
+                               Source="pantalla.png"/>
+
+                                                <!-- Valor -->
+                                                <Label Grid.Row="0" 
+                               Grid.Column="1"
+                               Text="Nombre:"
+                               FontSize="Micro"
+                               Margin="0"
+                               HorizontalOptions="Center"/>
+                                                <Label Grid.Row="0" 
+                               Grid.Column="2"
+                               Text="{Binding Pnombre}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="Start"
+                               Margin="0"/>
+
+                                                <!-- Hora do Lance -->
+                                                <Label Grid.Row="0" 
+                               Grid.Column="3"
+                               Text="Provedor:"
+                               FontSize="Micro"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                                <Label Grid.Row="0" 
+                               Grid.Column="4"
+                               Text="{Binding Provedor}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                                <Label Grid.Row="0" 
+                               Grid.Column="5"
+                               Text="Categoria:"
+                               FontSize="Micro"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                                <Label Grid.Row="0" 
+                               Grid.Column="6"
+                               Text="{Binding Categoria}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                                <Label Grid.Row="0" 
+                               Grid.Column="7"
+                               Text="Precio:"
+                               FontSize="Micro"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                                <Label Grid.Row="0" 
+                               Grid.Column="8"
+                               Text="{Binding Precio}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+
+
+                                                <!-- Repartir conteudo com cor -->
+                                                <BoxView Grid.Row="1" 
+                                 Grid.Column="0"
+                                 Grid.ColumnSpan="9"
+                                 BackgroundColor="Red"/>
+
+
+
+                                            </Grid>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

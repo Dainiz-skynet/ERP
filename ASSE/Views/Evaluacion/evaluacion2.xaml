@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+
+             mc:Ignorable="d"
+             Title="MUESTRA ALEATOREA"
+             x:Class="ASSE.Views.Evaluacion.evaluacion2"
+             >
+    
+    <ContentPage.Content>
+        <ScrollView>
+
+
+
+            <StackLayout>
+                
+                <StackLayout>
+                    <Image Margin="0,0,0,10" HeightRequest="100" Source="listaP.PNG" ></Image>
+                    <Label Margin="0,0,0,10" Text="MUESTRA" FontAttributes="Bold" FontSize="Large" TextColor="Orange" HorizontalTextAlignment="Center" ></Label>
+                    <Label Margin="0,0,0,10" x:Name="Muestra"  FontAttributes="Bold" FontSize="Large" TextColor="Orange" HorizontalTextAlignment="Center" ></Label>
+
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Start" >
+                        
+                        <ListView x:Name="lstProducts" ItemSelected="LstProducts_ItemSelected" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid Margin="2">
+                                            <!-- Colunas -->
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="1"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Image Grid.Row="0" 
+                               Grid.Column="0" 
+                               Margin="0"
+                               Source="pantalla.png"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="1" 
+                               Text="ID:"
+                               FontSize="Micro"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="2"
+                               Text="{Binding Pid}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="Start"
+                               Margin="0"/>
+
+
+                                            <Label Grid.Row="0" 
+                               Grid.Column="3"
+                               Text="tipo:"
+                               FontSize="Micro"
+                               Margin="0"
+                               HorizontalOptions="Center"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="4"
+                               Text="{Binding Pnombre}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="Start"
+                               Margin="0"/>
+
+
+                                            <Label Grid.Row="0" 
+                               Grid.Column="5"
+                               Text="correo:"
+                               FontSize="Micro"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="6"
+                               Text="{Binding Provedor}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="7"
+                               Text="nombre:"
+                               FontSize="Micro"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="8"
+                               Text="{Binding Categoria}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="9"
+                               Text="Precio:"
+                               FontSize="Micro"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="10"
+                               Text="{Binding Precio}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="11"
+                               Text="evaluado:"
+                               FontSize="Micro"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <input:CheckBox Grid.Row="0" 
+                               Grid.Column="12"
+                               IsChecked="{Binding evaluado}"
+                               IsDisabled="True"
+                               
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+
+                                            <BoxView Grid.Row="1" 
+                                 Grid.Column="0"
+                                 Grid.ColumnSpan="13"
+                                 BackgroundColor="Red"/>
+
+
+
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

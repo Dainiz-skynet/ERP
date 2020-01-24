@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ASSE.Views.Lista.ListaPage">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="Center"                   
+
+                  BackgroundColor="White">
+
+            <Button  Text="LISTA PRODUCTOS" Clicked="Button_Clicked" ImageSource="listaP.PNG"></Button>
+            <Button  Text="LISTA USUARIOS" Clicked="Button_Clicked_1" ImageSource="usuarioL.PNG"></Button>
+            <Button  Text="LISTA EVALUCIONES" Clicked="Button_Clicked_2" ImageSource="evaluado.PNG"></Button>
+            
+
+        </StackLayout>  
+        
+    </ContentPage.Content>
+</ContentPage>

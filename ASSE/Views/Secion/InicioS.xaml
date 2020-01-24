@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="LOGIN"
+             
+             x:Class="ASSE.Views.Secion.InicioS">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0" Padding="0" BackgroundColor="Maroon"  >
+                <Image HorizontalOptions="FillAndExpand" HeightRequest="300"
+          VerticalOptions="Start" Source="ASSES.jpg" />
+
+                <StackLayout HeightRequest="100">
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="14" Text="Usuario:" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+                    <Entry x:Name="Lusu" HorizontalOptions="FillAndExpand" Placeholder="ingrese usuario" TextColor="White" BackgroundColor="Maroon" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="14" Text="Password:" TextColor="White"
+          HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" />
+                    <Entry x:Name="Lcont" HorizontalOptions="FillAndExpand" Placeholder="Contraseña" TextColor="White" BackgroundColor="Maroon" IsPassword="True"/>
+                </StackLayout>
+                <StackLayout HeightRequest="100">
+                    
+                </StackLayout>
+                
+                
+                <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="White" Padding="5" HorizontalOptions="Center">
+
+                    <StackLayout Spacing="0" BackgroundColor="White" Orientation="Horizontal" HorizontalOptions="Start">
+                        <Button Text="INICIAR" BackgroundColor="Red" WidthRequest="100" HeightRequest="40"  HorizontalOptions="StartAndExpand" VerticalOptions="Center" Clicked="Button_Clicked" />
+                        <Label FontSize="14" TextColor="Red" Text="Inicio de seccion" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                    </StackLayout>
+
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="OPCIONES DE PERFIL"
+             x:Class="ASSE.Views.Profile_Settings.Gusuario">
+    <ContentPage.Content>
+        
+        <ScrollView >
+        <StackLayout>
+            
+            <StackLayout>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                        
+                        <Image Margin="0,0,0,10" HeightRequest="100" Source="useragrgar.PNG" ></Image>
+                    <Label Margin="0,0,0,10" Text="ASSE-EVOL USER CONTROL" FontAttributes="Bold" FontSize="Large" TextColor="Orange" HorizontalTextAlignment="Center" ></Label>
+
+                    <Entry x:Name="txtUid" Placeholder="Usuario id" IsEnabled="False"></Entry>
+                    <Entry x:Name="txtpassword" Placeholder="Contraseña"></Entry>
+                    <Picker x:Name="PickUtipo" ></Picker>
+                    <Entry x:Name="txtemail" Placeholder="Email"></Entry>
+                    <Picker x:Name="PickUarea"  ></Picker>
+                        
+                    
+
+
+
+                    <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnAdd" WidthRequest="200" Text="AGREGAR" Clicked="BtnAdd_Clicked"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnUpdate" WidthRequest="200" Text="ACTUALIZAR" Clicked="BtnUpdate_Clicked" />
+                        <Button x:Name="btnDelete" WidthRequest="200" Text="BORRAR" Clicked="BtnDelete_Clicked" />
+                    </StackLayout>
+
+
+
+                        <StackLayout >
+                            
+                        <ListView x:Name="lstPersons" ItemSelected="LstPersons_ItemSelected">
+                      
+                            
+                            <ListView.ItemTemplate >
+                                
+                            <DataTemplate >
+                                
+                                <ViewCell >
+                                    <Grid Margin="2" HorizontalOptions="Start" >
+                                        <!-- Colunas -->
+                                        <Grid.ColumnDefinitions  >
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- Linhas -->
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="1"/>
+                                        </Grid.RowDefinitions>
+
+                                        <!-- Código -->
+                                                <Image Grid.Row="0" 
+                               Grid.Column="0" 
+                               Margin="0"
+                               Source="users.png"/>
+
+                                                <!-- Valor -->
+                                        <Label Grid.Row="0" 
+                               Grid.Column="1"
+                               Text="tipo:"
+                               FontSize="Small"
+                               Margin="0"
+                               HorizontalOptions="Center"/>
+                                        <Label Grid.Row="0" 
+                               Grid.Column="2"
+                               Text="{Binding Ugrupo}" 
+                               FontSize="Small"
+                               TextColor="Black"
+                               HorizontalOptions="Start"
+                               Margin="0"/>
+
+                                        <!-- Hora do Lance -->
+                                        <Label Grid.Row="0" 
+                               Grid.Column="3"
+                               Text="correo:"
+                               FontSize="Small"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                        <Label Grid.Row="0" 
+                               Grid.Column="4"
+                               Text="{Binding email}" 
+                               FontSize="Small"
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="5"
+                               Text="nombre:"
+                               FontSize="Small"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="6"
+                               Text="{Binding Uarea}" 
+                               FontSize="Small"
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+
+                                            <!-- Repartir conteudo com cor -->
+                                        <BoxView Grid.Row="1" 
+                                 Grid.Column="0"
+                                 Grid.ColumnSpan="7"
+                                 BackgroundColor="Red"/>
+
+
+                                                
+                                            </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                            
+                        </StackLayout>
+                    </StackLayout>
+                    
+
+                </StackLayout>
+
+            </StackLayout>
+            
+        </ScrollView>
+            
+    </ContentPage.Content>
+</ContentPage>

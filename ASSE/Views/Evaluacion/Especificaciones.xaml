@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             mc:Ignorable="d"
+             Title="ESPECIFICACIONES"
+             x:Class="ASSE.Views.Evaluacion.Especificaciones">
+
+    <ContentPage.Content>
+        <ScrollView>
+
+
+
+            <StackLayout>
+                <StackLayout>
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                        
+                        <ListView x:Name="lstEspecificaciones" ItemSelected="LstEspecificaciones_ItemSelected" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid Margin="2">
+                                            <!-- Colunas -->
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="1"/>
+                                            </Grid.RowDefinitions>
+                                            <Image Grid.Row="0" 
+                               Grid.Column="0" 
+                               Margin="0"
+                               Source="cheked.png"/>
+
+                                            <Label Grid.Row="0" 
+                               Grid.Column="1" 
+                               Text="ID:"
+                               FontSize="Micro"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="2"
+                               Text="{Binding Eid}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="Start"
+                               Margin="0"/>
+
+
+                                            <Label Grid.Row="0" 
+                               Grid.Column="3"
+                               Text="tipo:"
+                               FontSize="Micro"
+                               Margin="0"
+                               HorizontalOptions="Center"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="4"
+                               Text="{Binding Enombre}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="Start"
+                               Margin="0"/>
+
+
+                                            <Label Grid.Row="0" 
+                               Grid.Column="5"
+                               Text="correo:"
+                               FontSize="Micro"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="6"
+                               Text="{Binding EDescripcion}" 
+                               FontSize="Micro"
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <Label Grid.Row="0" 
+                               Grid.Column="7"
+                               Text="evaluado:"
+                               FontSize="Micro"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            <input:CheckBox Grid.Row="0" 
+                               Grid.Column="8"
+                               IsChecked="{Binding Eselec}"
+                               IsDisabled="True"
+                               
+                               TextColor="Black"
+                               HorizontalOptions="End"
+                               Margin="0"/>
+                                            
+
+                                           
+
+                                <BoxView Grid.Row="1" 
+                                 Grid.Column="0"
+                                 Grid.ColumnSpan="9"
+                                 BackgroundColor="Red"/>
+
+
+
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <StackLayout>
+                            <Button Text="TERMINAR EVALUACION" Clicked="Button_Clicked"
+                                    VerticalOptions="CenterAndExpand" 
+                                    HorizontalOptions="CenterAndExpand" />
+                            
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

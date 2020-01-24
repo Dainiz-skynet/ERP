@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="ESCANEO QR"
+             x:Class="ASSE.Views.Evaluacion.evaluacion">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Escanear codigo del stock de productos deseado" Clicked="Button_click"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"  ImageSource="scaner.PNG"/>
+            <Label Text="" x:Name="mycodes" TextColor="Red" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
